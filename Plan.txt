@@ -1,0 +1,6 @@
+Overview
+-have it play decks efficiently, learning from its mistakes
+-analyzer function, real player can use it to see optimal moves
+
+Stage 1-
+teach it basic deck
