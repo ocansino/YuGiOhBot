@@ -1,5 +1,5 @@
 import json
-
+import requests
 
 
 def search_id(json_file, id):
@@ -10,6 +10,14 @@ def search_id(json_file, id):
         if card["id"] == id:
             return card
 
-    return None
-result = search_id("card_list.json", 23771716)
+def get_image(json_file, id):
+    temp = search_id(json_file, id)
 
+    return temp['card_images']
+
+result = search_id("card_list.json", 54652250)
+result_image = get_image("card_list.json", 54652250)
+#r = requests.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark Magician')
+print(result)
+#print(r.json())
+print(result_image)
